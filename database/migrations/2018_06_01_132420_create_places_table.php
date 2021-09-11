@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Schema;
-use Grimzy\LaravelMysqlSpatial\Schema\Blueprint;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class CreatePlacesTable extends Migration
