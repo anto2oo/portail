@@ -111,6 +111,9 @@ class Sidebar extends React.Component {
 							<NavLink className="sidebar-link" to="/services">
 								<FontAwesomeIcon icon="concierge-bell" /> Services
 							</NavLink>
+							<NavLink className="sidebar-link" to="/calendar">
+								<FontAwesomeIcon icon="calendar" /> Calendrier
+							</NavLink>
 							<NavLink className="sidebar-link" to="/assos">
 								<FontAwesomeIcon icon="hands-helping" /> Associations
 							</NavLink>

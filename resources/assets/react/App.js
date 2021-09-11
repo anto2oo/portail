@@ -31,6 +31,7 @@ import AssoDetailScreen from './screens/Asso';
 import ProfileScreen from './screens/Profile';
 import BookingScreen from './screens/Booking';
 import PartnersListScreen from './screens/PartnersList';
+import GlobalCalendar from './screens/Calendar';
 
 class App extends React.Component {
 	constructor(props) {
@@ -57,6 +58,7 @@ class App extends React.Component {
 										<Switch>
 											<Route path="/" exact component={HomeScreen} />
 											<Route path="/assos" exact component={AssoListScreen} />
+											<Route path="/calendar" exact component={GlobalCalendar} />
 											<Route path="/assos/:login" component={AssoDetailScreen} />
 											<Route path="/services" exact component={ServiceListScreen} />
 											<Route path="/partners" exact component={PartnersListScreen} />
