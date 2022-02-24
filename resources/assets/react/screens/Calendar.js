@@ -67,6 +67,13 @@ class GlobalCalendar extends React.Component {
 		);
 	}
 
+	onView(duration) {
+		this.setState(
+			state => ({ ...state, duration }),
+			() => this.loadEvents()
+		);
+	}
+
 	getEvents() {
 		const { events } = this.state;
 		const generatedEvents = [];
@@ -133,6 +140,7 @@ class GlobalCalendar extends React.Component {
 						events={this.getEvents()}
 						messages={messages}
 						onNavigate={date => this.onNavigate(date)}
+						onView={duration => this.onView(duration)}
 					/>
 				</div>
 				<span className={`loader large${fetching ? ' active' : ''}`} />
