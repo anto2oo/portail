@@ -11,12 +11,12 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import BigCalendar from 'react-big-calendar';
+import { Calendar as BigCalendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 
 import actions from '../redux/actions';
 
-const localizer = BigCalendar.momentLocalizer(moment);
+const localizer = momentLocalizer(moment);
 
 const messages = {
 	allDay: 'Journée',
@@ -45,6 +45,12 @@ class GlobalCalendar extends React.Component {
 		};
 
 		this.loadEvents();
+	}
+
+	componentDidMount() {
+		const { dispatch } = this.props;
+
+		dispatch(actions.config({ title: 'Calendrier associatif' }));
 	}
 
 	static getDefaultView() {

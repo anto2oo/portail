@@ -11,7 +11,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import BigCalendar from 'react-big-calendar';
+import { Calendar as BigCalendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 
 import CalendarSelector from './Selector';
@@ -19,7 +19,7 @@ import { colorFromBackground } from '../../utils';
 
 import actions from '../../redux/actions';
 
-const localizer = BigCalendar.momentLocalizer(moment);
+const localizer = momentLocalizer(moment);
 
 const messages = {
 	allDay: 'Journée',
