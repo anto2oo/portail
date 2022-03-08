@@ -33,6 +33,9 @@ class Event extends Model implements OwnableContract
 
     protected $casts = [
         'full_day' => 'boolean',
+        // Datetimes on Safari require to be formatted according to the ISO standard.
+        'begin_at' => 'datetime:c',
+        'end_at' => 'datetime:c',
     ];
 
     protected $hidden = [
